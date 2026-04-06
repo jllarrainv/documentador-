@@ -2,23 +2,19 @@ import React, { useState, useEffect, useRef } from 'react';
 import { jsPDF } from 'jspdf';
 import './App.css';
 
-// Logo Blue Express como componente SVG
+// Logo Blue Express como imagen
+const BLUEX_LOGO = 'data:image/jpeg;base64,AQUI_VA_EL_BASE64';
+
 const BlueExpressLogo = ({ width = 160, white = true }) => (
-  <svg width={width} height={width * 0.35} viewBox="0 0 200 70" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor={white ? '#FFFFFF' : '#0033A0'} />
-        <stop offset="100%" stopColor={white ? '#B8D4F0' : '#00A3E0'} />
-      </linearGradient>
-    </defs>
-    <text x="0" y="38" fontFamily="'Segoe UI', Arial, sans-serif" fontSize="42" fontWeight="800" fill="url(#logoGrad)" letterSpacing="-1">
-      blue
-    </text>
-    <text x="0" y="62" fontFamily="'Segoe UI', Arial, sans-serif" fontSize="24" fontWeight="600" fill={white ? 'rgba(255,255,255,0.8)' : '#00A3E0'} letterSpacing="4">
-      EXPRESS
-    </text>
-    <rect x="115" y="10" width="4" height="28" rx="2" fill="#00A3E0" />
-  </svg>
+  <img
+    src={BLUEX_LOGO}
+    alt="Blue Express"
+    style={{
+      width: width,
+      height: 'auto',
+      filter: white ? 'brightness(0) invert(1)' : 'none',
+    }}
+  />
 );
 
 function App() {
