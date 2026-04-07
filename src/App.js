@@ -18,7 +18,7 @@ const BlueExpressLogo = ({ width = 160, white = true }) => (
 );
 
 // Gemini API Config
-const GEMINI_API_KEY = 'AIzaSyCFmeR8U80aknM2mrJ6OilUegvH7IQKJJg';
+const GEMINI_API_KEY =  '';
 const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
 
 function App() {
